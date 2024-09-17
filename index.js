@@ -48,7 +48,9 @@ const authenticateJWT = (req, res, next) => {
 };
 
 app.get("/protected", authenticateJWT, (req, res) => {
-    // TODO: Implement the protected route
+    app.get("/protected", authenticateJWT, (req, res) => {
+        res.json({message: "Access granted to protected route", user: req.user});
+    })
 });
 
 app.get("/", (req, res) => {
