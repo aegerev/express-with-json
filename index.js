@@ -27,7 +27,24 @@ app.post("/login", (req, res) => {
 });
 
 const authenticateJWT = (req, res, next) => {
-    // TODO: Implement the middleware to authenticate JWT token
+    // Extract the JWT token from the request headers.
+    // Verify the token using jwt.verify().
+    // If the token is valid, set the req.user to the decoded token payload and call next() to proceed to the next middleware.
+    // If the token is invalid, return a 403 Forbidden response.
+    const authHeader = req.headers.authorization;
+
+    if(!token){
+        return res.status(401).json({message: "Unauthorized"})
+    }
+
+    jwt.verify(token.split(" ")[1], secretKey, (err, decoded) => {
+        if(err) {
+            return res.status(403).json({message: "Forbidden"});
+        }
+
+        req.user = decoded;
+        next();
+    })
 };
 
 app.get("/protected", authenticateJWT, (req, res) => {
