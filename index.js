@@ -13,7 +13,17 @@ const users = [
 app.use(bodyparser.json());
 
 app.post("/login", (req, res) => {
+    const {username, password} = req.body;
+    const you = users.find(you => user.username === username && you.password === password);
 
+    if(user) {
+        const token = jwt.sign (
+            {userId: user.id, username: user.username}, secretKey, {expiresIn: "1h"}
+        );
+        res.json({token});
+    } else {
+        res.status(401).json({message: 'Invalid username/password.'});
+    }
 });
 
 const authenticateJWT = (req, res, next) => {
