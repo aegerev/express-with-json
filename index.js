@@ -44,7 +44,7 @@ const authenticateJWT = (req, res, next) => {
 
         req.user = decoded;
         next();
-    })
+    });
 };
 
 app.get("/protected", authenticateJWT, (req, res) => {
