@@ -11,6 +11,7 @@ const users = [
     { id: 2, username: "pinguin", password: "OtVinta!" },
    ];
    
+   const port = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 
@@ -56,6 +57,6 @@ app.get("/", (req, res) => {
 
 });
 
-app.listen(3000, () => {
-    console.log(`Server is running on port 3000`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
