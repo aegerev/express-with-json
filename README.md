@@ -12,7 +12,8 @@ Unfortunately, since we are doing the back-end, I can't deploy it to a website. 
 3. Install the ThunderClient Extension using the VS Code Extension Store
 4. In the VS Code console, start up the server by using node index.js (!THIS IS VERY IMPORTANT. FAILURE TO DO SO WILL RESULT IN THE APP GIVING AN ERROR.!)
 5. In ThunderClient, enter http://localhost:3000. You should get the following message:
-   ![image](https://github.com/user-attachments/assets/5894a73f-6681-4601-a6be-887303f246c1)
+   ![image](https://github.com/user-attachments/assets/b52ce4f1-0563-4f43-9577-89f10e81123b)
+
 
 7. Replace the URL in the URL input field with http://localhost:3000/login. Select the drop-down list beside the URL input and change the GET method to a POST method.  
    Select the "Body" tab below the URL input. Copy the following JSON inside the "Body" tab:
