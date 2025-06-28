@@ -7,7 +7,7 @@ const secretKey = "your-secret-key";
 
 
 const users = [
-    { id: 1, username: "ariel", password: "NewAtlantica2024!" },
+    { id: 1, username: "ariel", password: "NewAtlantica2025!" },
     { id: 2, username: "pinguin", password: "OtVinta!" },
    ];
    
@@ -53,10 +53,10 @@ app.post("/login", (req, res) => {
     });
 
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to NET - First In Education Nationwide." });
+    res.json({ message: "Welcome to Kanal Romashka, a World Without Violence." });
 
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
