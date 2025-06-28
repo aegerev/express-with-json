@@ -25,7 +25,7 @@ If you run it, you should get the token. FOR SECURITY PURPOSES, STORE IT SOMEWHE
 
 8. Replace the URL in the input field with http://localhost:3000/protected. Select the drop-down list beside the URL input and change the POST method to a GET method.  
     a. Next, select the "Headers" tab below the URL input. In the "Header" tab, ensure that the fields "Authorization" and "Accept" are selected. Inside the "value" field, add "Bearer" followed by the token you copied in the previous step. The "Header" tab should look like the following:
-![image](https://github.com/user-attachments/assets/029aad65-76e8-4bcd-a582-a93fa135e9a6)
+![image](https://github.com/user-attachments/assets/1f4b468c-36d8-4330-825b-692e9bf1b046)
     b. Select the “Send” button.
 
 ## Credits
